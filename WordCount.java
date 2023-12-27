@@ -25,14 +25,18 @@ public class WordCount {
             System.out.println("Key: " + entry.getKey() +"\t"+ " Value:" + entry.getValue());
         }
 
-        String searchWord = "not";
+        String searchWord = "avoidable";
         int hash_code = searchWord.hashCode();
-
+        int index;
         if(wordIndex.containsKey(hash_code))
         {
-            int index = wordIndex.get(hash_code);
+            index = wordIndex.get(hash_code);
             System.out.println(searchWord + ": " + index);
+            words[index] = "";
+            System.out.println("");
 
+            String newString = String.join(" ", words);
+            System.out.println(newString);
         }
         else
         {
